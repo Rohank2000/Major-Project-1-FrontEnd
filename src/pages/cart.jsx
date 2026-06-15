@@ -37,8 +37,8 @@ const Cart = () => {
 
   return (
     <div className="container mt-4">
-      <h1 className="mb-4">Cart</h1>
-      <div className="row g-4 bg-secondary-subtle p-3">
+      <h1 className="mb-5">Cart</h1>
+      <div className="row g-4 bg-secondary-subtle p-0">
         <div className="col-12 col-lg-8">
           {loading ? (
             <div className="text-center">

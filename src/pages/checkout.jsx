@@ -50,7 +50,7 @@ const Checkout = () => {
 					Failed to load product data. Please try again later.
 				</div>
 			)}
-			<h4>Saved Addresses</h4>
+			<h4 className="pb-4">Saved Addresses</h4>
 			<div className="row g-4 bg-secondary-subtle p-3">
 				<div className="col-12 col-lg-7">
 					<AddressManager selectedAddressId={selectedAddressId}

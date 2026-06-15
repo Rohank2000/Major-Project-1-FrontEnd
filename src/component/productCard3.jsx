@@ -29,7 +29,7 @@ const ProductCard3 = ({ product }) => {
 
     return (
         <Link to={`/category/productlist/details/${product._id}`} style={{textDecoration:"none"}}>
-            <div className="card mb-3 shadow-sm m-4">
+            <div className="card mb-3 shadow-sm m-0">
                 <div className="row g-0">
                     <div className="col-md-4">
                         <img src={product.productImg} className="img-fluid rounded-start object-fit-cover" alt={product.productName} style={{ height: "100%", width: "100%" }} />

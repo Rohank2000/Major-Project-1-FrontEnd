@@ -68,8 +68,8 @@ const AddressManager = ({ selectedAddressId, onSelect, radioOff }) => {
             <p className="text-muted">No addresses saved yet.</p>
           ) : (
           addresses.map((addr) => (
-            <ul key={addr._id} className="list-group list-group mb-3 shadow-sm" style={{ width: "100%", maxWidth: "550px" }}>
-              <li className="list-group-item p-3">
+            <ul key={addr._id} className="list-group list-group mb-3 shadow-sm" style={{ width: "100%", maxWidth: "590px" }}>
+              <li className="list-group-item p-5">
                 <div className="d-flex flex-column flex-md-row justify-content-between align-items-start gap-2">
                   <div className="d-flex flex-wrap align-items-center gap-2 w-100">
                     <input type="radio" name="selectedAddress"
