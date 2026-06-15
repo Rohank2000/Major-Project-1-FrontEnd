@@ -38,8 +38,8 @@ const Cart = () => {
   return (
     <div className="container mt-4">
       <h1 className="mb-4">Cart</h1>
-      <div className="row gap-5 bg-secondary-subtle">
-        <div className="col text-start">
+      <div className="row g-4 bg-secondary-subtle p-3">
+        <div className="col-12 col-lg-8">
           {loading ? (
             <div className="text-center">
               <div className="spinner-border" role="status">
@@ -56,8 +56,8 @@ const Cart = () => {
         </div>
 
         {cartData.length > 0 && (
-          <div className="col text-end m-4" >
-            <div className="card shadow-sm" style={{ width: "100%", maxWidth: "370px" }}>
+          <div className="col-12 col-lg-4">
+            <div className="card shadow-sm">
               <div className="card-body">
                 <h6 className="border-bottom pb-2 mb-3">
                   <strong>Price Details</strong>

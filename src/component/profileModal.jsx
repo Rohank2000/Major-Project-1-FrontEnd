@@ -16,6 +16,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
                 className="card border border-primary border-4 shadow p-3 mb-5 bg-body-tertiary rounded text-Dark"
                 style={{
                     width: '290px',
+                    maxWidth: '90vw',
                     position: 'absolute',
                     top: '100%',
                     right: 0,

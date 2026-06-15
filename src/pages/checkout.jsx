@@ -51,52 +51,49 @@ const Checkout = () => {
 				</div>
 			)}
 			<h4>Saved Addresses</h4>
-			<div className="row gap-5 bg-secondary-subtle p-3">
-				<div className="col text-start">
-					{<AddressManager selectedAddressId={selectedAddressId}
-						onSelect={setSelectedAddressId} />}
+			<div className="row g-4 bg-secondary-subtle p-3">
+				<div className="col-12 col-lg-7">
+					<AddressManager selectedAddressId={selectedAddressId}
+						onSelect={setSelectedAddressId} />
 				</div>
-				<div className="col text-end">
-
+				<div className="col-12 col-lg-5">
 					{cartData.length > 0 && (
-						<div className="col text-end" >
-							<div className="card shadow-sm" style={{ width: "100%", maxWidth: "340px" }}>
-								<div className="card-body">
-									<h6 className="border-bottom pb-2 mb-3">
-										<strong>Price Details</strong>
-									</h6>
+						<div className="card shadow-sm">
+							<div className="card-body">
+								<h6 className="border-bottom pb-2 mb-3">
+									<strong>Price Details</strong>
+								</h6>
 
-									<div className="d-flex justify-content-between mb-2">
-										<span>
-											Price ({totalQuantity} item{totalQuantity > 1 ? "s" : ""})
-										</span>
-										<span className="fw-semibold">
-											{formatPrice(totalPrice)}
-										</span>
-									</div>
-
-									<div className="d-flex justify-content-between mb-2">
-										<span>Delivery</span>
-										<span className="text-success fw-semibold">Free</span>
-									</div>
-
-									<hr />
-
-									<div className="d-flex justify-content-between mb-3">
-										<strong>Total Amount</strong>
-										<strong className="fs-5">
-											{formatPrice(totalPrice)}
-										</strong>
-									</div>
-
-									<button
-										className="btn btn-warning w-100"
-										onClick={handleProceedToBuy}
-										disabled={orderLoading || !selectedAddressId}
-									>
-										{orderLoading ? "Placing Order..." : "Place Your Order"}
-									</button>
+								<div className="d-flex justify-content-between mb-2">
+									<span>
+										Price ({totalQuantity} item{totalQuantity > 1 ? "s" : ""})
+									</span>
+									<span className="fw-semibold">
+										{formatPrice(totalPrice)}
+									</span>
 								</div>
+
+								<div className="d-flex justify-content-between mb-2">
+									<span>Delivery</span>
+									<span className="text-success fw-semibold">Free</span>
+								</div>
+
+								<hr />
+
+								<div className="d-flex justify-content-between mb-3">
+									<strong>Total Amount</strong>
+									<strong className="fs-5">
+										{formatPrice(totalPrice)}
+									</strong>
+								</div>
+
+								<button
+									className="btn btn-warning w-100"
+									onClick={handleProceedToBuy}
+									disabled={orderLoading || !selectedAddressId}
+								>
+									{orderLoading ? "Placing Order..." : "Place Your Order"}
+								</button>
 							</div>
 						</div>
 					)}

@@ -69,19 +69,22 @@ const AddressManager = ({ selectedAddressId, onSelect, radioOff }) => {
           ) : (
           addresses.map((addr) => (
             <ul key={addr._id} className="list-group list-group mb-3 shadow-sm" style={{ width: "100%", maxWidth: "550px" }}>
-              <li className="list-group-item d-flex justify-content-between align-items-start">
-                <div className="d-flex p-4">
-                  <input className="me-5" type="radio" name="selectedAddress"
-                    checked={addr._id === selectedAddressId}
-                    onChange={() => onSelect(addr._id)} className={`me-3 ${radioOff ? "d-none" : ""}`}/>
-                  <p className="fw-bold me-3">{addr.FullName}</p>
-                  <p className="me-3">{addr.FlatNo}, {addr.Area}</p>
-                  <p className="me-3">{addr.Town}, {addr.State} - {addr.Pincode}</p>
-
-                </div>
-                <div className="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <button className="btn btn-outline-info me-md-2 " type="button" onClick={() => handleEditClick(addr)}>Edit</button>
-                   <button className={addresses.length === 1 ? "btn btn-outline-danger d-none" : "btn btn-outline-danger"} type="button" onClick={() => setDeleteTargetId(addr._id)}>Delete</button>
+              <li className="list-group-item p-3">
+                <div className="d-flex flex-column flex-md-row justify-content-between align-items-start gap-2">
+                  <div className="d-flex flex-wrap align-items-center gap-2 w-100">
+                    <input type="radio" name="selectedAddress"
+                      checked={addr._id === selectedAddressId}
+                      onChange={() => onSelect(addr._id)} className={`flex-shrink-0 ${radioOff ? "d-none" : ""}`}/>
+                    <span className="fw-bold">{addr.FullName}</span>
+                    <span className="text-muted">|</span>
+                    <span>{addr.FlatNo}, {addr.Area}</span>
+                    <span className="text-muted">|</span>
+                    <span>{addr.Town}, {addr.State} - {addr.Pincode}</span>
+                  </div>
+                  <div className="d-flex gap-2 flex-shrink-0">
+                    <button className="btn btn-outline-info btn-sm" type="button" onClick={() => handleEditClick(addr)}>Edit</button>
+                     <button className={addresses.length === 1 ? "btn btn-outline-danger btn-sm d-none" : "btn btn-outline-danger btn-sm"} type="button" onClick={() => setDeleteTargetId(addr._id)}>Delete</button>
+                  </div>
                 </div>
               </li>
             </ul>

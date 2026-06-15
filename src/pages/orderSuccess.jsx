@@ -60,26 +60,24 @@ const OrderSuccess = () => {
                                 ))}
                             </ul>
                         ) : (
-                        <div className="row">
+                        <div className="row g-3">
                             {orderItems?.map((item, index) => (
-                                <div className="col-md-6 mb-3" key={index}>
+                                <div className="col-12 col-md-6" key={index}>
                                     <div className="card h-100 shadow-sm">
-                                        <div className="row h-100">
-                                            <div className="col-md-5">
+                                        <div className="row g-0 h-100">
+                                            <div className="col-4 col-md-5">
                                                 <img
                                                     src={item.product?.productImg}
-                                                    className="img-fluid rounded-start  h-100"
+                                                    className="img-fluid rounded-start h-100 w-100 object-fit-cover"
                                                     alt={item.product?.productName || item.productId}
-                                                    style={{ minHeight: "150px" }}
+                                                    style={{ minHeight: "100px" }}
                                                 />
                                             </div>
-                                            <div className="col-md-7">
-                                                <div className="card-body d-flex justify-content-between h-100">
-                                                    <h6 className="card-title  me-1">{item.product?.productName || `Product ID: ${item.productId}`}</h6>
-                                                    <p className="card-text text-muted mb-1">
-                                                        {item.product && <span className="fw-semibold me-3">₹{item.product.price}</span>}
-                                                    </p>
-                                                    <p className="card-text">
+                                            <div className="col-8 col-md-7">
+                                                <div className="card-body d-flex flex-column justify-content-between h-100 py-2">
+                                                    <h6 className="card-title">{item.product?.productName || `Product ID: ${item.productId}`}</h6>
+                                                    {item.product && <p className="card-text text-muted mb-1 fw-semibold">₹{item.product.price}</p>}
+                                                    <p className="card-text mb-0">
                                                         <span className="badge bg-primary">Qty: {item.quantity}</span>
                                                     </p>
                                                 </div>

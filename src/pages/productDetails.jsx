@@ -50,8 +50,8 @@ const ProductDetails = () => {
 	return (
 		<div className="container mt-4">
 			<h2 className="mb-4">Product Details</h2>
-			<div className="row gap-5 p-3 bg-secondary-subtle">
-				<div className="col-12 col-md-3 col-lg-4">
+			<div className="row g-4 p-3 bg-secondary-subtle">
+				<div className="col-12 col-md-5 col-lg-4">
 					{loading ? (
 						<div className="text-center">
 							<div className="spinner-grow spinner-grow-sm" role="status">
@@ -61,37 +61,34 @@ const ProductDetails = () => {
 					) : error ? "Error Occurred" : !productInfo ? (
 						<p className="text-muted">Product not found.</p>
 					) : (
-						<div className="card h-100 shadow-sm" style={{ width: "100%", maxHeight: "500px" }}>
+						<div className="card shadow-sm">
 							<img src={productInfo.productImg} alt={productInfo.productName} className="card-img-top object-fit-cover" style={{
-								height: "400px",
+								height: "300px",
 								width: "100%"
 							}}
 							/>
 							<div className="card-body" >
-
-								<div className="d-grid gap-2 mt-3">
-									<button type="button" className="btn btn-primary btn-sm btn-equal" onClick={() => handleToggleValue(productInfo, QuantityToggleValue)}>
+								<div className="d-grid gap-2">
+									<button type="button" className="btn btn-primary btn-sm" onClick={() => handleToggleValue(productInfo, QuantityToggleValue)}>
 										Add To Cart
 									</button>
-									<button type="button" className="btn btn-secondary btn-sm btn-equal" onClick={() => toggleWishlist(productInfo)}>
+									<button type="button" className="btn btn-secondary btn-sm" onClick={() => toggleWishlist(productInfo)}>
 										{wishlist.includes(productInfo._id) ? "Remove From WishList" : "Add To WishList"}
 									</button>
 								</div>
-
 							</div>
-
 						</div>)}
 				</div>
-				<div className="col-12 col-md-3 col-lg-4">
+				<div className="col-12 col-md-7 col-lg-8">
 					{loading ? "" : error ? "Error Occurred" : !productInfo ? (
 						<p className="text-muted">Product not found.</p>
 					) : (
-						<div style={{ height: "500px" }}>
+						<div>
 							<h3>{productInfo.productName}</h3>
-							<p className="d-flex"><strong className="me-2">{productInfo.rating}</strong><StarRating rating={productInfo.rating} /></p>
+							<p className="d-flex align-items-center"><strong className="me-2">{productInfo.rating}</strong><StarRating rating={productInfo.rating} /></p>
 							<p className="fs-3"><strong>₹ {productInfo.price}</strong></p>
 							<div className="d-flex align-items-center gap-3 my-3">
-								<div className="input-group" style={{ width: 160 }}>
+								<div className="input-group" style={{ width: 140 }}>
 									<button className="btn btn-outline-primary" type="button" onClick={decreaseQuantity}>-</button>
 									<span className="input-group-text">{QuantityToggleValue}</span>
 									<button className="btn btn-outline-primary" type="button" onClick={increaseQuantity}>+</button>
@@ -100,11 +97,10 @@ const ProductDetails = () => {
 							<div className="mb-3">
 								<strong className="me-2">Sizes:</strong>
 								{sizesArray.map((size, index) => (
-									<button key={index} className="btn btn-outline-danger me-2" style={{ height: "20%" }}>{size}</button>
+									<button key={index} className="btn btn-outline-danger me-2 mb-1">{size}</button>
 								))}
 							</div>
-
-							<strong>Description : </strong><p className="text-body-secondary">{productInfo.description}</p>
+							<strong>Description : </strong><p className="text-body-secondary m-0">{productInfo.description}</p>
 						</div>
 					)}
 				</div>

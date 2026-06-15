@@ -27,13 +27,12 @@ const WishList = () => {
 						<p className="text-center m-3">No Product Available in Wishlist</p>
 					</div>
 				) : (
-					<div className="row bg-secondary-subtle p-4">
-						{productInfo?.map((item, index) => (
-
-							<div className="col-3 mb-3">
-								<ProductCard2 key={index} product={item} />
-							</div>
-						))}
+                    <div className="row g-3 bg-secondary-subtle p-2 p-md-4">
+                        {productInfo?.map((item, index) => (
+                            <div className="col-6 col-md-4 col-lg-3" key={index}>
+                                <ProductCard2 product={item} />
+                            </div>
+                        ))}
 
 					</div>
 				)}

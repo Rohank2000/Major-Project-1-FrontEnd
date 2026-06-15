@@ -53,13 +53,13 @@ const Order = () => {
                             <div className="col-12 mb-4" key={order._id}>
                                 <div className="card shadow-sm">
                                     <div className="m-3">
-                                        <div className="d-flex justify-content-between">
+                                        <div className="d-flex flex-wrap justify-content-between gap-2">
                                             <small className="text-muted">Order ID: {order._id}</small>
                                             <small className="text-muted">{new Date(order.date).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit" })}</small>
                                         </div>
                                     </div>
                                     <div className="card-body">
-                                        <div className="d-flex justify-content-between mb-3">
+                                        <div className="d-flex flex-wrap justify-content-between mb-3 gap-2">
                                             <h5 className="mb-0">Total: <span className="text-success">{formatPrice(order.totalAmount)}</span></h5>
                                             <span className="badge bg-success fs-6">Delivered</span>
                                         </div>
@@ -77,19 +77,19 @@ const Order = () => {
                                         {productLoading ? (
                                             <p className="text-muted">Loading product details...</p>
                                         ) : (
-                                            <div className="row">
+                                            <div className="row g-3">
                                                 {order.items?.map((item) => {
                                                     const product = findProduct(item.productId);
                                                     return (
-                                                        <div className="col-md-6 mb-3" key={item.productId}>
+                                                        <div className="col-12 col-md-6" key={item.productId}>
                                                             <div className="card h-100 shadow-sm">
-                                                                <div className="row h-100">
+                                                                <div className="row g-0 h-100">
                                                                     <div className="col-4">
                                                                         <img
                                                                             src={product?.productImg}
-                                                                            className="img-fluid rounded-start object-fit-cover h-100"
+                                                                            className="img-fluid rounded-start object-fit-cover h-100 w-100"
                                                                             alt={product?.productName || item.productId}
-                                                                            style={{ minHeight: "100px" }}
+                                                                            style={{ minHeight: "80px" }}
                                                                         />
                                                                     </div>
                                                                     <div className="col-8">

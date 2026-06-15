@@ -26,39 +26,35 @@ const Home = () => {
 				<h1>Home</h1>
 
 				<h3>Top Categories</h3>
-				<section className="d-flex justify-content-center">
-
-
-					{loading ? (
-						<button className="btn btn-primary" type="button" disabled>
+            <section className="d-flex justify-content-center">
+                    {loading ? (
+                        <button className="btn btn-primary" type="button" disabled>
   <span className="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
   <span role="status">Loading...</span>
 </button>) : error ? (
-							"Error Occurred"
-						) : (
-						<div className="row">
-							{categories.slice(0, 4).map((cat, index) => (
-								<div className="col-2 me-4" key={index}>
-									<Link to={`/category/productlist/${cat._id}`}>
-										<div className="card mb-3" style={{ width: 140, height: 140, borderRadius: 8 }}>
-											<img
-												src={cat.img}
-												className="img-fluid rounded-start"
-												alt={cat.name}
-												style={{ width: "100%", height: "100%", objectFit: "cover" }}
-
-											/>
-										</div>
-									</Link>
-
-								</div>
-							))}
-							<div className="col-2 mt-4">
-								<Link className="btn btn-outline-success btn-lg" to={`/category/productlist/all`}>All Products</Link>
-							</div>
-						</div>
-					)}
-				</section>
+                            "Error Occurred"
+                        ) : (
+                        <div className="row g-3 justify-content-center">
+                            {categories.slice(0, 4).map((cat, index) => (
+                                <div className="col-6 col-sm-4 col-md-3 col-lg-2" key={index}>
+                                    <Link to={`/category/productlist/${cat._id}`}>
+                                        <div className="card" style={{ borderRadius: 8, aspectRatio: "1/1" }}>
+                                            <img
+                                                src={cat.img}
+                                                className="img-fluid rounded-start w-100 h-100"
+                                                alt={cat.name}
+                                                style={{ objectFit: "cover" }}
+                                            />
+                                        </div>
+                                    </Link>
+                                </div>
+                            ))}
+                            <div className="col-12 col-sm-4 col-md-3 col-lg-2 d-flex align-items-center">
+                                <Link className="btn btn-outline-success w-100" to={`/category/productlist/all`}>All Products</Link>
+                            </div>
+                        </div>
+                    )}
+                </section>
 				<br />
 				<section>
 
