@@ -40,7 +40,7 @@ const Checkout = () => {
 	};
 
 	return (
-		<div className="container mt-4">
+		<div className="container mt-4 pb-5 pb-md-0">
 			<div className="my-2">
 				<h1>Checkout</h1>
 
@@ -56,7 +56,7 @@ const Checkout = () => {
 					<AddressManager selectedAddressId={selectedAddressId}
 						onSelect={setSelectedAddressId} />
 				</div>
-				<div className="col-12 col-lg-5">
+				<div className="col-12 col-lg-5 d-none d-md-block">
 					{cartData.length > 0 && (
 						<div className="card shadow-sm">
 							<div className="card-body">
@@ -99,6 +99,22 @@ const Checkout = () => {
 					)}
 				</div>
 			</div>
+
+			{cartData.length > 0 && (
+				<div className="d-md-none position-fixed bottom-0 start-0 w-100 bg-white border-top shadow p-3" style={{ zIndex: 1030 }}>
+					<div className="d-flex justify-content-between align-items-center mb-2">
+						<strong>Total Amount</strong>
+						<strong className="fs-5">{formatPrice(totalPrice)}</strong>
+					</div>
+					<button
+						className="btn btn-warning w-100"
+						onClick={handleProceedToBuy}
+						disabled={orderLoading || !selectedAddressId}
+					>
+						{orderLoading ? "Placing Order..." : "Place Your Order"}
+					</button>
+				</div>
+			)}
 		</div>
 
 	)
