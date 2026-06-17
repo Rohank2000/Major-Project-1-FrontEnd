@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import StarRating from "../component/starRating";
+import StarRating from "./starRating";
 import useEcommerceContext from "../context/useEcommerceContext";
 const ProductCard3 = ({ product }) => {
 

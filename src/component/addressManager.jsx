@@ -1,6 +1,6 @@
 import { useState } from "react";
 import useEcommerceContext from "../context/useEcommerceContext";
-import AddressFormModal from "../component/addressFormModal";
+import AddressFormModal from "./addressFormModal";
 
 const AddressManager = ({ selectedAddressId, onSelect, radioOff }) => {
   const { addresses, addNewAddress, removeAddress, editAddress } = useEcommerceContext();

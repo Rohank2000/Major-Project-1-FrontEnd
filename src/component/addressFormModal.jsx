@@ -1,4 +1,4 @@
-import IndianStatesData from "../component/indianStates";
+import IndianStatesData from "./indianStates";
 
 const AddressFormModal = ({ formData, onChange, onSubmit, isSubmitting, editId, onClose }) => {
   return (
