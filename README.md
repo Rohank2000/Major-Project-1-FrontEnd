@@ -51,6 +51,7 @@ Path
 /user/profile/checkout
 /user/profile/order-success
 /user/profile/orders
+
 🔌 API Endpoints Used
 Endpoint
 GET /api/fetch/categories
@@ -62,5 +63,4 @@ POST /api/addresses
 POST /api/addresses/:id
 DELETE /api/remove/addresses
 POST /api/orders
-🙌 Acknowledgements
-Built as Major Project 1 — all product data and persistence handled by a separate backend service.
+
