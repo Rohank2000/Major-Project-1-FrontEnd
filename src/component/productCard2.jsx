@@ -18,18 +18,21 @@ const ProductCard2 = ({ product }) => {
     return (
         <>
             <Link to={`/category/productlist/details/${product._id}`} style={{ textDecoration: "none" }}>
-                <div className="card h-100 shadow-sm">
-                    <img src={product.productImg} alt={product.productName} className="card-img-top object-fit-cover"
- />
-                    <div className="card-body d-flex flex-column" >
-                        <h4>{product.productName}</h4>
+                <div className="card shadow-sm" style={{ aspectRatio: "3/4" }}>
+                    <div style={{ height: "55%", overflow: "hidden" }}>
+                        <img src={product.productImg} alt={product.productName} className="w-100 h-100 object-fit-cover" />
+                    </div>
+                    <div className="card-body d-flex flex-column p-2" >
+                        <p className="card-title m-0 text-truncate" style={{ fontSize: "0.8rem", fontWeight: 500 }}>
+                            {product.productName}
+                        </p>
 
-                        <div className="d-grid gap-2 mt-auto">
-                            <button type="button" className="btn btn-primary btn-sm btn-equal" onClick={(event) => handleAddToCart(event)}>
+                        <div className="d-grid gap-1 mt-auto">
+                            <button type="button" className="btn btn-primary py-0" style={{ fontSize: "0.7rem", lineHeight: "1.8" }} onClick={(event) => handleAddToCart(event)}>
                                 Add To Cart
                             </button>
-                            <button type="button" className="btn btn-secondary btn-sm btn-equal" onClick={(event) => handleToggleWishlist(event)}>
-                                {wishlist.includes(product._id) ? "Remove From WishList" : "Add To WishList"}
+                            <button type="button" className="btn btn-secondary py-0" style={{ fontSize: "0.7rem", lineHeight: "1.8" }} onClick={(event) => handleToggleWishlist(event)}>
+                                {wishlist.includes(product._id) ? "Remove" : "Add To WishList"}
                             </button>
                         </div>
 

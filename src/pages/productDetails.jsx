@@ -49,7 +49,7 @@ const ProductDetails = () => {
 
 	return (
 		<div className="container mt-4">
-			<h2 className="mb-4">Product Details</h2>
+			<h3 className="mb-5">Product Details</h3>
 			<div className="row g-4 p-3 bg-secondary-subtle">
 				<div className="col-12 col-md-5 col-lg-4">
 					{loading ? (
@@ -84,7 +84,7 @@ const ProductDetails = () => {
 						<p className="text-muted">Product not found.</p>
 					) : (
 						<div>
-							<h3>{productInfo.productName}</h3>
+							<h5 className="fw-semibold">{productInfo.productName}</h5>
 							<p className="d-flex align-items-center"><strong className="me-2">{productInfo.rating}</strong><StarRating rating={productInfo.rating} /></p>
 							<p className="fs-3"><strong>₹ {productInfo.price}</strong></p>
 							<div className="d-flex align-items-center gap-3 my-3">

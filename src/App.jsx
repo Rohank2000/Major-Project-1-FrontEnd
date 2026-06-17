@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+  import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from "./header-footer/header";
 import Footer from "./header-footer/footer";

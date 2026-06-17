@@ -6,7 +6,7 @@ const AddressFormModal = ({ formData, onChange, onSubmit, isSubmitting, editId, 
       className="position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
       style={{ backgroundColor: "rgba(0,0,0,0.5)", zIndex: 1050 }}
     >
-      <div className="bg-white rounded p-4 shadow" style={{ width: "100%", maxWidth: "500px", maxHeight: "90vh", overflowY: "auto" }}>
+      <div className="bg-white rounded p-3 p-md-4 shadow mx-2" style={{ width: "100%", maxWidth: "500px", maxHeight: "90vh", overflowY: "auto" }}>
         <h4 className="mb-3">{editId ? "Update Address" : "Add New Address"}</h4>
 
         <form className="row g-3" onSubmit={onSubmit}>

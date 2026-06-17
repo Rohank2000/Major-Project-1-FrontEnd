@@ -153,19 +153,16 @@ const ProductList = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        {/* Sidebar — always visible on md+, offcanvas on mobile */}
         <div className="d-none d-md-block col-md-3 col-lg-2 p-0">
           {filterSidebar}
         </div>
 
-        {/* Mobile filter toggle */}
         <div className="d-md-none p-3">
           <button className="btn btn-outline-secondary w-100" onClick={() => setShowFilters(true)}>
             Filters
           </button>
         </div>
 
-        {/* Offcanvas for mobile filters */}
         {showFilters && (
           <>
             <div className="position-fixed top-0 start-0 w-100 h-100" style={{ backgroundColor: "rgba(0,0,0,0.5)", zIndex: 1040 }} onClick={() => setShowFilters(false)} />
