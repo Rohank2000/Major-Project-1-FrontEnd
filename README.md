@@ -33,4 +33,4 @@
 - git clone https://github.com/Rohank2000/Clothing-Ecommerce-App-FrontEnd-Data-.git
 - cd Major_Project_1_Frontend
 - Install Dependencies
-- npm install````
+- npm install
