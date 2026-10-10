@@ -1,4 +1,4 @@
-# 👕 ClothingApp (Major Project 1 FrontEnd)
+# 👕 BharatBasics
 
 > A modern e-commerce App frontend for clothing catalogue — built with React + Vite.
 
@@ -40,31 +40,6 @@ BASE_URL=https://your-backend-url.vercel.app
 Run Development Server
 npm run dev
 Build for Production
-npm run build
-npm run preview
-
-🧭 Routes
-Path
-/
-/category/productlist/:categoryId
-/category/productlist/details/:clothingId
-/user/wishlist
-/user/cart
-/user/profile
-/user/profile/address
-/user/profile/checkout
-/user/profile/order-success
-/user/profile/orders
-
-🔌 API Endpoints Used
-Endpoint
-GET /api/fetch/categories
-GET /api/fetch/clothing
-GET /api/fetch/cart?userId=...
-GET /api/fetch/wishlist?userId=...
-GET /api/fetch/addresses
-POST /api/addresses
-POST /api/addresses/:id
-DELETE /api/remove/addresses
-POST /api/orders
+npm run build```
+npm run preview```
 
