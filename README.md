@@ -49,29 +49,29 @@
 
 ## 🧭 Routes
 
-### Path
-
-- `/`
-- `/category/productlist/:categoryId`
-- `/category/productlist/details/:clothingId`
-- `/user/wishlist`
-- `/user/cart`
-- `/user/profile`
-- `/user/profile/address`
-- `/user/profile/checkout`
-- `/user/profile/order-success`
-- `/user/profile/orders`
+| Path | Description |
+| --- | --- |
+| `/` | Home page displaying featured collections and curated picks |
+| `/category/productlist/:categoryId` | Product listing page filtered by a specific category |
+| `/category/productlist/details/:clothingId` | Detailed view for a selected clothing item |
+| `/user/wishlist` | User's saved wishlist items |
+| `/user/cart` | Shopping cart items and summary |
+| `/user/profile` | User profile management overview |
+| `/user/profile/address` | Manage shipping and billing addresses |
+| `/user/profile/checkout` | Checkout and order placement page |
+| `/user/profile/order-success` | Order confirmation screen following a successful purchase |
+| `/user/profile/orders` | User's past order history |
 
 ## 🔌 API Endpoints Used
 
-### Endpoint
-
-- `GET /api/fetch/categories`
-- `GET /api/fetch/clothing`
-- `GET /api/fetch/cart?userId=...`
-- `GET /api/fetch/wishlist?userId=...`
-- `GET /api/fetch/addresses`
-- `POST /api/addresses`
-- `POST /api/addresses/:id`
-- `DELETE /api/remove/addresses`
-- `POST /api/orders`
+| Method & Endpoint | Description |
+| --- | --- |
+| `GET /api/fetch/categories` | Fetch all product categories |
+| `GET /api/fetch/clothing` | Fetch available clothing items |
+| `GET /api/fetch/cart?userId=...` | Retrieve cart items for a specific user |
+| `GET /api/fetch/wishlist?userId=...` | Retrieve wishlist items for a specific user |
+| `GET /api/fetch/addresses` | Fetch saved user addresses |
+| `POST /api/addresses` | Add a new user address |
+| `POST /api/addresses/:id` | Update an existing user address by ID |
+| `DELETE /api/remove/addresses` | Delete a specified user address |
+| `POST /api/orders` | Place a new order |
