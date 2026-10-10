@@ -29,7 +29,7 @@
 
 ### Clone the Repository
 
-``bash
+````bash
 git clone https://github.com/Rohank2000/Clothing-Ecommerce-App-FrontEnd-Data-.git
 cd Major_Project_1_Frontend
 Install Dependencies
@@ -41,12 +41,12 @@ Run Development Server
 npm run dev
 Build for Production
 npm run build
-npm run preview``
+npm run preview````
 
 ## 🧭 Routes
 
 ### Path
-``/
+````/
 /category/productlist/:categoryId
 /category/productlist/details/:clothingId
 /user/wishlist
@@ -55,18 +55,19 @@ npm run preview``
 /user/profile/address
 /user/profile/checkout
 /user/profile/order-success
-/user/profile/orders``
+/user/profile/orders````
 
 ## 🔌 API Endpoints Used
 
 ### Endpoint
-``GET /api/fetch/categories
+````bash
+GET /api/fetch/categories
 GET /api/fetch/clothing
 GET /api/fetch/cart?userId=...
 GET /api/fetch/wishlist?userId=...
 GET /api/fetch/addresses
 POST /api/addresses
 POST /api/addresses/:id
-DELETE /api/remove/addresses``
+DELETE /api/remove/addresses````
 POST /api/orders
 
