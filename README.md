@@ -38,7 +38,7 @@
 
 ```bash
 - Create a .env file in the project root:
-- `BASE_URL=https://your-backend-url.vercel.app`
+- `BASE_URL=https://bharatbasicsapi.vercel.app/`
 ```
 
 #### Run Development Server
