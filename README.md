@@ -34,3 +34,48 @@
 - cd Major_Project_1_Frontend
 - Install Dependencies
 - npm install
+
+#### Environment Variables
+````bash
+- Create a .env file in the project root:
+- BASE_URL=https://your-backend-url.vercel.app
+
+#### Run Development Server
+````bash
+- npm run dev
+#### Build for Production
+````bash
+- npm run build
+- npm run preview
+
+## 🧭 Routes
+
+### Path
+
+````bash
+ /
+/category/productlist/:categoryId
+/category/productlist/details/:clothingId
+/user/wishlist
+/user/cart
+/user/profile
+/user/profile/address
+/user/profile/checkout
+/user/profile/order-success
+/user/profile/orders
+
+## 🔌 API Endpoints Used
+
+### Endpoint
+
+````bash
+GET /api/fetch/categories
+GET /api/fetch/clothing
+GET /api/fetch/cart?userId=...
+GET /api/fetch/wishlist?userId=...
+GET /api/fetch/addresses
+POST /api/addresses
+POST /api/addresses/:id
+DELETE /api/remove/addresses````
+POST /api/orders
+
