@@ -51,7 +51,7 @@
 
 ### Path
 
- /
+ `/
 /category/productlist/:categoryId
 /category/productlist/details/:clothingId
 /user/wishlist
@@ -60,7 +60,7 @@
 /user/profile/address
 /user/profile/checkout
 /user/profile/order-success
-/user/profile/orders
+/user/profile/orders`
 
 ## 🔌 API Endpoints Used
 
