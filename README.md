@@ -37,7 +37,7 @@
 #### Environment Variables
 
 ```bash
-- Create a .env file in the project root:`
+- Create a .env file in the project root:
 - `BASE_URL=https://your-backend-url.vercel.app`
 ```
 
