@@ -28,24 +28,24 @@
 
 ### Clone the Repository
 
-- git clone https://github.com/Rohank2000/Clothing-Ecommerce-App-FrontEnd-Data-.git
-- cd Major_Project_1_Frontend
-- Install Dependencies
-- npm install
+- `git clone https://github.com/Rohank2000/Clothing-Ecommerce-App-FrontEnd-Data-.git`
+- `cd Major_Project_1_Frontend`
+- `Install Dependencies`
+- `npm install`
 
 #### Environment Variables
 
-- Create a .env file in the project root:
-- BASE_URL=https://your-backend-url.vercel.app
+- `Create a .env file in the project root:`
+- `BASE_URL=https://your-backend-url.vercel.app`
 
 #### Run Development Server
 
-- npm run dev
+- `npm run dev`
 
 #### Build for Production
 
-- npm run build
-- npm run preview
+- `npm run build`
+- `npm run preview`
 
 ## 🧭 Routes
 
