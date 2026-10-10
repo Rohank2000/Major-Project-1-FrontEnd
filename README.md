@@ -50,12 +50,12 @@
 - npm run build
 - npm run preview
 
-## Live Project Link 
+## Project Live Link 
 
 <a href="https://bharatbasics.vercel.app/">Live Link</a>
 
 ## Demo Link
-<a href="https://drive.google.com/file/d/1hzJ8fVFbJgs6ZoRNd3VDFzVEZgjGZUdr/view?usp=sharing">Video Link</a>
+Watch a walkthrough of functionalities of this app: : <a href="https://drive.google.com/file/d/1hzJ8fVFbJgs6ZoRNd3VDFzVEZgjGZUdr/view?usp=sharing">Video Link</a>
 
 ## 🧭 Routes
 
