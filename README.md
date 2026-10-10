@@ -60,7 +60,7 @@
 - `/user/profile/address`
 - `/user/profile/checkout`
 - `/user/profile/order-success`
-`/user/profile/orders`
+- `/user/profile/orders`
 
 ## 🔌 API Endpoints Used
 
@@ -69,9 +69,9 @@
 - `GET /api/fetch/categories`
 - `GET /api/fetch/clothing`
 - `GET /api/fetch/cart?userId=...`
-`GET /api/fetch/wishlist?userId=...`
-`GET /api/fetch/addresses`
-`POST /api/addresses`
-`POST /api/addresses/:id`
-`DELETE /api/remove/addresses`
-`POST /api/orders`
+- `GET /api/fetch/wishlist?userId=...`
+- `GET /api/fetch/addresses`
+- `POST /api/addresses`
+- `POST /api/addresses/:id`
+- `DELETE /api/remove/addresses`
+- `POST /api/orders`
