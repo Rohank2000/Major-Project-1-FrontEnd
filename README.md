@@ -29,23 +29,26 @@
 
 ### Clone the Repository
 
-git clone https://github.com/Rohank2000/Clothing-Ecommerce-App-FrontEnd-Data-.git
-cd Major_Project_1_Frontend
-Install Dependencies
-npm install
-Environment Variables
-Create a .env file in the project root:
-BASE_URL=https://your-backend-url.vercel.app
-Run Development Server
-npm run dev
-Build for Production
-npm run build
-npm run preview
+````bash
+- git clone https://github.com/Rohank2000/Clothing-Ecommerce-App-FrontEnd-Data-.git
+- cd Major_Project_1_Frontend
+- Install Dependencies
+- npm install
+#### Environment Variables
+
+- Create a .env file in the project root:
+- BASE_URL=https://your-backend-url.vercel.app
+
+#### Run Development Server
+- npm run dev
+#### Build for Production
+- npm run build
+- npm run preview
 
 ## 🧭 Routes
 
 ### Path
-````/
+ /
 /category/productlist/:categoryId
 /category/productlist/details/:clothingId
 /user/wishlist
@@ -54,12 +57,12 @@ npm run preview
 /user/profile/address
 /user/profile/checkout
 /user/profile/order-success
-/user/profile/orders````
+/user/profile/orders
 
 ## 🔌 API Endpoints Used
 
 ### Endpoint
-````bash
+
 GET /api/fetch/categories
 GET /api/fetch/clothing
 GET /api/fetch/cart?userId=...
