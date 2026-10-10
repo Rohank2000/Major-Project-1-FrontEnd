@@ -18,7 +18,6 @@
 
 **React 19 · Vite 8 · React Router 7 · Bootstrap 5 · React Context**
 
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -42,6 +41,7 @@
 #### Run Development Server
 
 - npm run dev
+
 #### Build for Production
 
 - npm run build
