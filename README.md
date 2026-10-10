@@ -29,7 +29,6 @@
 
 ### Clone the Repository
 
-````bash
 git clone https://github.com/Rohank2000/Clothing-Ecommerce-App-FrontEnd-Data-.git
 cd Major_Project_1_Frontend
 Install Dependencies
@@ -41,7 +40,7 @@ Run Development Server
 npm run dev
 Build for Production
 npm run build
-npm run preview````
+npm run preview
 
 ## 🧭 Routes
 
